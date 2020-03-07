@@ -197,6 +197,8 @@ function webViewerLoad() {
       window.PDFViewerApplication = app.PDFViewerApplication;
       window.PDFViewerApplicationOptions = appOptions.AppOptions;
       app.PDFViewerApplication.run(config);
+
+      window.dispatchEvent(new Event('pdfjs-ready'));
     });
   } else {
     if (typeof PDFJSDev !== "undefined" && PDFJSDev.test("CHROME")) {
@@ -216,6 +218,8 @@ function webViewerLoad() {
     }
 
     pdfjsWebApp.PDFViewerApplication.run(config);
+
+    window.dispatchEvent(new Event('pdfjs-ready'));
   }
 }
 
