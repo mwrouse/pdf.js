@@ -1,5 +1,11 @@
-# PDF.js
-This is a modified version of [PDF.js](https://mozilla.github.io/pdf.js/) to allow it to be easier to use, allowing for you to send documents over postMessage.
+# PDF.js IFrame
+This is a modified version of [PDF.js](https://mozilla.github.io/pdf.js/) designed to be placed in an iframe, which can then be sandboxed for security.
+
+Placing PDF.js in an iframe allows it to easily integrate with any code base and not interfere with existing architecture or code.
+
+This version of PDF.js has code that allows for documents to be loaded as Blobs, object URLs, or byte arrays by sending them over Post Message.
+
+Any errors that occur while rendering that PDF are also sent over Post Message back to the hosting window.
 
 ---
 

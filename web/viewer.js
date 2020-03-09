@@ -197,7 +197,7 @@ function webViewerLoad() {
       window.PDFViewerApplication = app.PDFViewerApplication;
       window.PDFViewerApplicationOptions = appOptions.AppOptions;
       app.PDFViewerApplication.run(config);
-
+      console.log("boogie bash");
       window.dispatchEvent(new Event('pdfjs-ready'));
     });
   } else {
